@@ -91,6 +91,10 @@ main {
   font-weight: 700;
 }
 
+.remove:hover {
+  cursor: pointer;
+}
+
 .notes .note .note-content {
   padding: 15px;
 }
