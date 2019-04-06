@@ -13,6 +13,18 @@ export default class NotesForm extends Component {
     });
   };
 
+  createNote = () => {
+    if (this.state.title !== "" && this.state.note !== "") {
+      firebase
+        .database()
+        .ref("notes")
+        .push({
+          title: this.state.title,
+          note: this.state.note
+        });
+    }
+  };
+
   render() {
     return (
       <section className="noteform">
@@ -36,7 +48,7 @@ export default class NotesForm extends Component {
             onChange={e => this.onChangeHandler(e, "note")}
           />
         </div>
-        <button>Create Note</button>
+        <button onClick={this.createNote}>Create Note</button>
       </section>
     );
   }
