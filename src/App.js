@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import * as firebase from "firebase";
+import Header from "./components/Header";
+import NotesForm from "./components/NotesForm";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Take Note</h1>
+        <Header />
+        <main>
+          <NotesForm />
+        </main>
       </div>
     );
   }
