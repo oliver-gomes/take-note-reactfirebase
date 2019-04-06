@@ -1,6 +1,11 @@
 import React, { Component } from "react";
+import * as firebase from "firebase";
 
 export default class NotesForm extends Component {
+  state = {
+    title: "",
+    note: ""
+  };
   render() {
     return (
       <section className="noteform">
